@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  TableViewSample1ViewController.swift
 //  AnyViewSample
 //
 //  Created by 藤原修市 on 2015/08/05.
@@ -8,26 +8,26 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    // メニュー
-//    var menu :[SampleViews:String] = [SampleViews.TableViewSample1: "Table View Sample 1", SampleViews.TableViewSample2: "Table View Sample 2"]
+class TableViewSample1ViewController :UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var bookTableView: UITableView!
+    
+    var bookList :[String] = ["book1", "book2", "book3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
-        
     }
-
     
+
     //
     // MARK: UITableViewDelegate
     //
@@ -36,8 +36,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // セクション内の行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SampleViews.count
+        return bookList.count
     }
+    
+    // 行の高さ
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return Const.kBookListDefaultRowHeight
+    }
+
     
     // セルの設定
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -45,18 +51,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         var cell :UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         // セルの設定
-        var view :SampleViews = SampleViews(rawValue: indexPath.row)!
-        cell.textLabel?.text = view.viewName()
+        cell.textLabel?.text = bookList[indexPath.row]
         
         return cell
     }
-
+    
     // セルが選択された
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        var view :SampleViews = SampleViews(rawValue: indexPath.row)!
-        self.performSegueWithIdentifier(view.segueName(), sender: self)
     }
 }
-

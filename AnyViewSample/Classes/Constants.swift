@@ -11,6 +11,7 @@ import UIKit
 
 struct Const {
     static let kMenuDefaultRowHeight :CGFloat = 64.0
+    static var kBookListDefaultRowHeight :CGFloat = 64.0
 }
 
 enum SampleViews :Int {
@@ -26,6 +27,14 @@ enum SampleViews :Int {
         switch self {
         case .TableViewSample1: return "Table View Sample 1"
         case .TableViewSample2: return "Table View Sample 2"
+        default: return ""
+        }
+    }
+    
+    func segueName()->String {
+        switch self {
+        case .TableViewSample1: return "TableViewSample1"
+        case .TableViewSample2: return "TableViewSample2"
         default: return ""
         }
     }
