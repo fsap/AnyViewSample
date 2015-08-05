@@ -1,0 +1,8 @@
+# system
+.DS_Store
+
+# Xcode
+build/
+xcuserdata
+*.ipa
+*.xcuserstate
