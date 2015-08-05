@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>51D607F4-7973-4267-B46A-C3D3551F2E4F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AnyViewSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3EEE6242E354D11BE4DA5C28063E818316AA9C70</key>
+		<string>http://github.com/fsap/AnyViewSample</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AnyViewSample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3EEE6242E354D11BE4DA5C28063E818316AA9C70</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://github.com/fsap/AnyViewSample</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3EEE6242E354D11BE4DA5C28063E818316AA9C70</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3EEE6242E354D11BE4DA5C28063E818316AA9C70</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AnyViewSample</string>
+		</dict>
+	</array>
+</dict>
+</plist>

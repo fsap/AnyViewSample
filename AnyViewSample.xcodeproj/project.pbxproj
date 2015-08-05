@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		F0E35E361B71B04E00CC6A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */; };
 		F0E35E391B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E371B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld */; };
-		F0E35E3B1B71B04E00CC6A6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E3A1B71B04E00CC6A6B /* ViewController.swift */; };
+		F0E35E3B1B71B04E00CC6A6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E3A1B71B04E00CC6A6B /* MainViewController.swift */; };
 		F0E35E3E1B71B04F00CC6A6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E35E3C1B71B04F00CC6A6B /* Main.storyboard */; };
 		F0E35E401B71B04F00CC6A6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E35E3F1B71B04F00CC6A6B /* Images.xcassets */; };
 		F0E35E431B71B04F00CC6A6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E35E411B71B04F00CC6A6B /* LaunchScreen.xib */; };
 		F0E35E4F1B71B04F00CC6A6B /* AnyViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E4E1B71B04F00CC6A6B /* AnyViewSampleTests.swift */; };
+		F0E35E5D1B71B6E000CC6A6B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E5C1B71B6E000CC6A6B /* Util.swift */; };
+		F0E35E601B71BC8D00CC6A6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E5F1B71BC8D00CC6A6B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +33,15 @@
 		F0E35E341B71B04E00CC6A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E35E381B71B04E00CC6A6B /* AnyViewSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnyViewSample.xcdatamodel; sourceTree = "<group>"; };
-		F0E35E3A1B71B04E00CC6A6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0E35E3A1B71B04E00CC6A6B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F0E35E3D1B71B04F00CC6A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0E35E3F1B71B04F00CC6A6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F0E35E421B71B04F00CC6A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F0E35E481B71B04F00CC6A6B /* AnyViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnyViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E35E4D1B71B04F00CC6A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E35E4E1B71B04F00CC6A6B /* AnyViewSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyViewSampleTests.swift; sourceTree = "<group>"; };
+		F0E35E5C1B71B6E000CC6A6B /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		F0E35E5F1B71BC8D00CC6A6B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +83,9 @@
 		F0E35E321B71B04E00CC6A6B /* AnyViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				F0E35E5B1B71B6E000CC6A6B /* Classes */,
 				F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */,
-				F0E35E3A1B71B04E00CC6A6B /* ViewController.swift */,
+				F0E35E3A1B71B04E00CC6A6B /* MainViewController.swift */,
 				F0E35E3C1B71B04F00CC6A6B /* Main.storyboard */,
 				F0E35E3F1B71B04F00CC6A6B /* Images.xcassets */,
 				F0E35E411B71B04F00CC6A6B /* LaunchScreen.xib */,
@@ -113,6 +118,23 @@
 				F0E35E4D1B71B04F00CC6A6B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0E35E5B1B71B6E000CC6A6B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F0E35E5E1B71B6E500CC6A6B /* Util */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F0E35E5E1B71B6E500CC6A6B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F0E35E5C1B71B6E000CC6A6B /* Util.swift */,
+				F0E35E5F1B71BC8D00CC6A6B /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E35E3B1B71B04E00CC6A6B /* ViewController.swift in Sources */,
+				F0E35E601B71BC8D00CC6A6B /* Constants.swift in Sources */,
+				F0E35E3B1B71B04E00CC6A6B /* MainViewController.swift in Sources */,
 				F0E35E361B71B04E00CC6A6B /* AppDelegate.swift in Sources */,
 				F0E35E391B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld in Sources */,
+				F0E35E5D1B71B6E000CC6A6B /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +439,7 @@
 				F0E35E541B71B04F00CC6A6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0E35E551B71B04F00CC6A6B /* Build configuration list for PBXNativeTarget "AnyViewSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +448,7 @@
 				F0E35E571B71B04F00CC6A6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
