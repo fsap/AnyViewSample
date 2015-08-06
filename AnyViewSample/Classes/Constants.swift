@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 struct Const {
-    static let kMenuDefaultRowHeight :CGFloat = 64.0
-    static var kBookListDefaultRowHeight :CGFloat = 64.0
+    static let kMenuDefaultRowHeight: CGFloat = 64.0
+    static let kBookListDefaultRowHeight: CGFloat = 64.0
+    
+    static let kBookEntityName: String = "Book"
 }
 
 enum SampleViews :Int {

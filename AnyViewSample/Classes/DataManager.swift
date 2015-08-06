@@ -28,6 +28,7 @@ class DataManager {
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("AnyViewSample.sqlite")
+        Log(NSString(format: "sqlite:%@", url))
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
         if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
@@ -67,7 +68,10 @@ class DataManager {
     }
     
     func find(entityName: String, condition: NSPredicate?, sort: [NSSortDescriptor]?)->[AnyObject]? {
-        var request = NSFetchRequest(entityName: entityName)
+//        var request = NSFetchRequest(entityName: entityName)
+        var request: NSFetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: self.managedObjectContext!)
+        request.entity = entity
         if condition != nil {
             request.predicate = condition
         }
@@ -103,4 +107,16 @@ class DataManager {
         }
     }
     
+    func remove(entity: NSManagedObject)->Bool {
+        if let context = self.managedObjectContext {
+            context.deleteObject(entity)
+            var error: NSError? = nil
+            if !context.save(&error) {
+                Log(NSString(format: "error code:%d msg:%@", error!.code, error!.description))
+                return false
+            }
+            return true
+        }
+        return false
+    }
 }

@@ -12,7 +12,10 @@ class CoreDataViewController :UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var bookTableView: UITableView!
     
-    var bookList :[String] = []
+    var bookList :[BookEntity] = []
+    
+    var manager: DataManager = DataManager.sharedInstance
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +26,12 @@ class CoreDataViewController :UIViewController, UITableViewDelegate, UITableView
         self.bookTableView.delegate = self
         self.bookTableView.dataSource = self
         
-        bookList = self.loadBooks()
+        self.bookList = self.loadBooks()
         if bookList.count == 0 {
             // 0件の場合データを入れる
             self.createBooks()
-            // 撮り直し
-            bookList = self.loadBooks()
+            // 取り直し
+            self.bookList = self.loadBooks()
         }
     }
     
@@ -45,30 +48,36 @@ class CoreDataViewController :UIViewController, UITableViewDelegate, UITableView
         LogM("setEditing")
     }
     
-    private func loadBooks()->[String] {
+    private func loadBooks()->[BookEntity] {
         
-        var manager: DataManager = DataManager.sharedInstance
-        var results: [BookEntity] = manager.find("AnyViewSample.BookEntity", condition: nil, sort: nil) as! [BookEntity]
-        
-        var books: [String] = []
+        let sortDescriptor = NSSortDescriptor(key: "sort_num", ascending: true)
+        let results: [BookEntity] = self.manager.find(Const.kBookEntityName, condition: nil, sort: [sortDescriptor]) as! [BookEntity]
+/*
         if results.count > 0 {
-            for book: BookEntity in results {
-                books.insert(book.title, atIndex: book.sort_num as Int)
+            for (index, book: BookEntity) in enumerate(results) {
+                books.insert(book.title, atIndex: index)
             }
         }
-        
-        return books
+*/
+        return results
     }
     
     private func createBooks()->Void {
         
-        var manager: DataManager = DataManager.sharedInstance
-        for (var i=0; i<3; i++) {
-            var book: BookEntity = manager.getEntity("BookEntity") as! BookEntity
+        for (var i=0; i<5; i++) {
+            var book: BookEntity = self.manager.getEntity(Const.kBookEntityName) as! BookEntity
             book.title = NSString(format: "title_%d", i) as String
             book.sort_num = i
             manager.save()
         }
+    }
+    
+    private func refreshSort()->Void {
+        for (index, book: BookEntity) in enumerate(self.bookList) {
+            book.sort_num = index
+            self.manager.save()
+        }
+        self.bookTableView.reloadData()
     }
     
     
@@ -101,7 +110,9 @@ class CoreDataViewController :UIViewController, UITableViewDelegate, UITableView
         var cell :UITableViewCell = tableView.dequeueReusableCellWithIdentifier("bookCell", forIndexPath: indexPath) as! UITableViewCell
         
         // セルの設定
-        cell.textLabel?.text = bookList[indexPath.row]
+        let book: BookEntity = bookList[indexPath.row]
+        cell.textLabel?.text = book.title
+        cell.detailTextLabel?.text = NSString(format: "id:%d", book.objectID) as String
         
         return cell
     }
@@ -137,14 +148,20 @@ class CoreDataViewController :UIViewController, UITableViewDelegate, UITableView
         Log(NSString(format: "section:[%d] row:[%d] style:[%d]", indexPath.section, indexPath.row, editingStyle.rawValue))
         switch editingStyle {
         case .Delete:
-            self.bookList.removeAtIndex(indexPath.row)
-            self.bookTableView?.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            // 確認を取る
+            ActionAlertViewController(nibName: nil, bundle: nil).show(self, title: "確認", message: "削除してもよろしいですか？", actionOk: { () -> Void in
+                let book: BookEntity = self.bookList[indexPath.row]
+                if self.manager.remove(book) {
+                    self.bookList.removeAtIndex(indexPath.row)
+                    self.bookTableView?.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                    self.refreshSort()
+                }
+            }, actionCancel:nil)
             return
         default:
             return
         }
     }
-    
     
     // 移動可否の設定
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -155,5 +172,10 @@ class CoreDataViewController :UIViewController, UITableViewDelegate, UITableView
     // 移動の確定
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         Log(NSString(format: "source:[%d] destination:[%d]", sourceIndexPath.row, destinationIndexPath.row))
+        
+        var sourceBook: BookEntity = self.bookList[sourceIndexPath.row]
+        self.bookList.removeAtIndex(sourceIndexPath.row)
+        self.bookList.insert(sourceBook, atIndex: destinationIndexPath.row)
+        self.refreshSort()
     }
 }
