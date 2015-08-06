@@ -17,6 +17,7 @@ struct Const {
 enum SampleViews :Int {
     case TableViewSample1 = 0,
         TableViewSample2,
+        ActionAlert,
         _count
     
     static var count :Int {
@@ -27,6 +28,7 @@ enum SampleViews :Int {
         switch self {
         case .TableViewSample1: return "Table View Sample 1"
         case .TableViewSample2: return "Table View Sample 2"
+        case .ActionAlert: return "Show Alert With Action"
         default: return ""
         }
     }
@@ -35,6 +37,7 @@ enum SampleViews :Int {
         switch self {
         case .TableViewSample1: return "TableViewSample1"
         case .TableViewSample2: return "TableViewSample2"
+        case .ActionAlert: return "ActionAlert"
         default: return ""
         }
     }

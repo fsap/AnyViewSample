@@ -56,7 +56,31 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         var view :SampleViews = SampleViews(rawValue: indexPath.row)!
-        self.performSegueWithIdentifier(view.segueName(), sender: self)
+        if view == SampleViews.ActionAlert {
+            // ダイアログ系(画面遷移無し)
+            ActionAlertViewController(nibName: nil, bundle: nil).show(self, title: "確認", message: "ダイアログのサンプル", actionOk:{()->Void in
+                LogM("start animation")
+                // OKボタンを押した時のアクション
+                var popupView: UILabel = UILabel(frame: CGRectMake(0.0, 0.0, 160, 40))
+                popupView.layer.cornerRadius = 5.0
+                popupView.layer.masksToBounds = true
+                popupView.center = self.view.center
+                popupView.backgroundColor = UIColor.grayColor()
+                popupView.textColor = UIColor.whiteColor()
+                popupView.textAlignment = .Center
+                popupView.font = UIFont.systemFontOfSize(10)
+                popupView.text = "ダイアログを閉じました"
+                self.view.addSubview(popupView)
+                UIView.animateWithDuration(2, animations: { () -> Void in
+                    popupView.alpha = 0.0
+                }, completion: { (Bool) -> Void in
+                    popupView.removeFromSuperview()
+                })
+            })
+        } else {
+            // 画面遷移
+            self.performSegueWithIdentifier(view.segueName(), sender: self)
+        }
     }
 }
 
