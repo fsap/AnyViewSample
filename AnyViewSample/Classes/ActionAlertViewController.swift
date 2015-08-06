@@ -13,12 +13,12 @@ class ActionAlertViewController: UIViewController, UIAlertViewDelegate {
     var actionOkBlock: (()->Void)
     
     required init(coder aDecoder: NSCoder) {
-        self.actionOkBlock = {()->Void in}
+        self.actionOkBlock = {}
         super.init(coder: aDecoder)
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        self.actionOkBlock = {()->Void in}
+        self.actionOkBlock = {}
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
