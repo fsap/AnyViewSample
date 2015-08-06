@@ -53,6 +53,7 @@
                     <navigationItem key="navigationItem" id="Gdx-ch-LJn"/>
                     <connections>
                         <segue destination="QnI-Mc-0ed" kind="show" identifier="TableViewSample1" id="VSe-wM-PLb"/>
+                        <segue destination="LfR-3D-fKJ" kind="show" identifier="CoreDataSample" id="AjP-WW-bdz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,6 +114,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4E-E6-eGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1724" y="-251"/>
+        </scene>
+        <!--Core Data View Controller-->
+        <scene sceneID="Ndh-bA-McK">
+            <objects>
+                <viewController id="LfR-3D-fKJ" customClass="CoreDataViewController" customModule="AnyViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pOC-w6-4Y9"/>
+                        <viewControllerLayoutGuide type="bottom" id="dL6-Nj-NId"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yvP-Mb-ENY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BKm-Of-Yvi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NRD-51-H17">
+                                        <rect key="frame" x="140" y="278" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NRD-51-H17" id="lP8-gi-Aba">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LfR-3D-fKJ" id="QQD-du-tDh"/>
+                                    <outlet property="delegate" destination="LfR-3D-fKJ" id="d6Z-jS-7WW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BKm-Of-Yvi" firstAttribute="bottom" secondItem="dL6-Nj-NId" secondAttribute="top" id="7L7-0I-ejM"/>
+                            <constraint firstItem="BKm-Of-Yvi" firstAttribute="leading" secondItem="yvP-Mb-ENY" secondAttribute="leading" id="RtG-wK-sx9"/>
+                            <constraint firstItem="BKm-Of-Yvi" firstAttribute="top" secondItem="yvP-Mb-ENY" secondAttribute="top" id="hFn-ok-hkg"/>
+                            <constraint firstAttribute="trailing" secondItem="BKm-Of-Yvi" secondAttribute="trailing" id="wP2-5R-qsg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookTableView" destination="BKm-Of-Yvi" id="muA-2x-5Ah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMa-8A-2iy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="620"/>
         </scene>
         <!--View List-->
         <scene sceneID="2QE-DU-w12">

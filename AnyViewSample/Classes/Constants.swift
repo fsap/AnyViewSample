@@ -16,8 +16,8 @@ struct Const {
 
 enum SampleViews :Int {
     case TableViewSample1 = 0,
-        TableViewSample2,
         ActionAlert,
+        CoreDataSample,
         _count
     
     static var count :Int {
@@ -27,8 +27,8 @@ enum SampleViews :Int {
     func viewName()->String {
         switch self {
         case .TableViewSample1: return "Table View Sample 1"
-        case .TableViewSample2: return "Table View Sample 2"
         case .ActionAlert: return "Show Alert With Action"
+        case .CoreDataSample: return "Core Data Sample"
         default: return ""
         }
     }
@@ -36,8 +36,8 @@ enum SampleViews :Int {
     func segueName()->String {
         switch self {
         case .TableViewSample1: return "TableViewSample1"
-        case .TableViewSample2: return "TableViewSample2"
         case .ActionAlert: return "ActionAlert"
+        case .CoreDataSample: return "CoreDataSample"
         default: return ""
         }
     }

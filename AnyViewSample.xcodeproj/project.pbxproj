@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F00B22181B730B2300BD4B0C /* ActionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B22171B730B2300BD4B0C /* ActionAlertViewController.swift */; };
+		F00B221D1B73893500BD4B0C /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B221C1B73893500BD4B0C /* BookEntity.swift */; };
+		F00B221F1B7389FE00BD4B0C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B221E1B7389FE00BD4B0C /* DataManager.swift */; };
+		F00B22221B738C5D00BD4B0C /* NSManagedObject+entityName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B22211B738C5D00BD4B0C /* NSManagedObject+entityName.swift */; };
+		F00B22241B739B1900BD4B0C /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B22231B739B1900BD4B0C /* CoreDataViewController.swift */; };
 		F0E35E361B71B04E00CC6A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */; };
 		F0E35E391B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E371B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld */; };
 		F0E35E3B1B71B04E00CC6A6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E3A1B71B04E00CC6A6B /* MainViewController.swift */; };
@@ -32,6 +36,10 @@
 
 /* Begin PBXFileReference section */
 		F00B22171B730B2300BD4B0C /* ActionAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionAlertViewController.swift; sourceTree = "<group>"; };
+		F00B221C1B73893500BD4B0C /* BookEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
+		F00B221E1B7389FE00BD4B0C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F00B22211B738C5D00BD4B0C /* NSManagedObject+entityName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+entityName.swift"; sourceTree = "<group>"; };
+		F00B22231B739B1900BD4B0C /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		F0E35E301B71B04E00CC6A6B /* AnyViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E35E341B71B04E00CC6A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F00B22191B73877000BD4B0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F00B221C1B73893500BD4B0C /* BookEntity.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F00B22201B738C4F00BD4B0C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F00B22211B738C5D00BD4B0C /* NSManagedObject+entityName.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		F0E35E271B71B04D00CC6A6B = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +151,9 @@
 		F0E35E5B1B71B6E000CC6A6B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F00B221E1B7389FE00BD4B0C /* DataManager.swift */,
+				F00B22201B738C4F00BD4B0C /* Categories */,
+				F00B22191B73877000BD4B0C /* Models */,
 				F0E35E611B71C85900CC6A6B /* ViewControllers */,
 				F0E35E5E1B71B6E500CC6A6B /* Util */,
 			);
@@ -147,6 +174,7 @@
 			children = (
 				F0E35E621B71C87100CC6A6B /* TableViewSample1ViewController.swift */,
 				F00B22171B730B2300BD4B0C /* ActionAlertViewController.swift */,
+				F00B22231B739B1900BD4B0C /* CoreDataViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -254,9 +282,13 @@
 				F0E35E631B71C87100CC6A6B /* TableViewSample1ViewController.swift in Sources */,
 				F0E35E601B71BC8D00CC6A6B /* Constants.swift in Sources */,
 				F0E35E3B1B71B04E00CC6A6B /* MainViewController.swift in Sources */,
+				F00B221D1B73893500BD4B0C /* BookEntity.swift in Sources */,
 				F00B22181B730B2300BD4B0C /* ActionAlertViewController.swift in Sources */,
+				F00B22241B739B1900BD4B0C /* CoreDataViewController.swift in Sources */,
 				F0E35E361B71B04E00CC6A6B /* AppDelegate.swift in Sources */,
+				F00B22221B738C5D00BD4B0C /* NSManagedObject+entityName.swift in Sources */,
 				F0E35E391B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld in Sources */,
+				F00B221F1B7389FE00BD4B0C /* DataManager.swift in Sources */,
 				F0E35E5D1B71B6E000CC6A6B /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
