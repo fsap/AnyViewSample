@@ -12,6 +12,10 @@
 		F00B221F1B7389FE00BD4B0C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B221E1B7389FE00BD4B0C /* DataManager.swift */; };
 		F00B22221B738C5D00BD4B0C /* NSManagedObject+entityName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B22211B738C5D00BD4B0C /* NSManagedObject+entityName.swift */; };
 		F00B22241B739B1900BD4B0C /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B22231B739B1900BD4B0C /* CoreDataViewController.swift */; };
+		F0C37B171B8208AE0045E1D8 /* LoadXmlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C37B161B8208AE0045E1D8 /* LoadXmlViewController.swift */; };
+		F0C37B1B1B820AC10045E1D8 /* what_is_html5_.opf in Resources */ = {isa = PBXBuildFile; fileRef = F0C37B191B820AC10045E1D8 /* what_is_html5_.opf */; };
+		F0C37B1C1B820AC10045E1D8 /* what_is_html5_.xml in Resources */ = {isa = PBXBuildFile; fileRef = F0C37B1A1B820AC10045E1D8 /* what_is_html5_.xml */; };
+		F0C37B1E1B820B200045E1D8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C37B1D1B820B200045E1D8 /* libxml2.dylib */; };
 		F0E35E361B71B04E00CC6A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */; };
 		F0E35E391B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E371B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld */; };
 		F0E35E3B1B71B04E00CC6A6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35E3A1B71B04E00CC6A6B /* MainViewController.swift */; };
@@ -40,6 +44,10 @@
 		F00B221E1B7389FE00BD4B0C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F00B22211B738C5D00BD4B0C /* NSManagedObject+entityName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+entityName.swift"; sourceTree = "<group>"; };
 		F00B22231B739B1900BD4B0C /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		F0C37B161B8208AE0045E1D8 /* LoadXmlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadXmlViewController.swift; sourceTree = "<group>"; };
+		F0C37B191B820AC10045E1D8 /* what_is_html5_.opf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = what_is_html5_.opf; sourceTree = "<group>"; };
+		F0C37B1A1B820AC10045E1D8 /* what_is_html5_.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = what_is_html5_.xml; sourceTree = "<group>"; };
+		F0C37B1D1B820B200045E1D8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F0E35E301B71B04E00CC6A6B /* AnyViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E35E341B71B04E00CC6A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C37B1E1B820B200045E1D8 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,9 +99,19 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		F0C37B181B820AC10045E1D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0C37B191B820AC10045E1D8 /* what_is_html5_.opf */,
+				F0C37B1A1B820AC10045E1D8 /* what_is_html5_.xml */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F0E35E271B71B04D00CC6A6B = {
 			isa = PBXGroup;
 			children = (
+				F0C37B1D1B820B200045E1D8 /* libxml2.dylib */,
 				F0E35E321B71B04E00CC6A6B /* AnyViewSample */,
 				F0E35E4B1B71B04F00CC6A6B /* AnyViewSampleTests */,
 				F0E35E311B71B04E00CC6A6B /* Products */,
@@ -111,6 +130,7 @@
 		F0E35E321B71B04E00CC6A6B /* AnyViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				F0C37B181B820AC10045E1D8 /* Resources */,
 				F0E35E5B1B71B6E000CC6A6B /* Classes */,
 				F0E35E351B71B04E00CC6A6B /* AppDelegate.swift */,
 				F0E35E3A1B71B04E00CC6A6B /* MainViewController.swift */,
@@ -172,6 +192,7 @@
 		F0E35E611B71C85900CC6A6B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F0C37B161B8208AE0045E1D8 /* LoadXmlViewController.swift */,
 				F0E35E621B71C87100CC6A6B /* TableViewSample1ViewController.swift */,
 				F00B22171B730B2300BD4B0C /* ActionAlertViewController.swift */,
 				F00B22231B739B1900BD4B0C /* CoreDataViewController.swift */,
@@ -259,7 +280,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C37B1B1B820AC10045E1D8 /* what_is_html5_.opf in Resources */,
 				F0E35E3E1B71B04F00CC6A6B /* Main.storyboard in Resources */,
+				F0C37B1C1B820AC10045E1D8 /* what_is_html5_.xml in Resources */,
 				F0E35E431B71B04F00CC6A6B /* LaunchScreen.xib in Resources */,
 				F0E35E401B71B04F00CC6A6B /* Images.xcassets in Resources */,
 			);
@@ -289,6 +312,7 @@
 				F00B22221B738C5D00BD4B0C /* NSManagedObject+entityName.swift in Sources */,
 				F0E35E391B71B04E00CC6A6B /* AnyViewSample.xcdatamodeld in Sources */,
 				F00B221F1B7389FE00BD4B0C /* DataManager.swift in Sources */,
+				F0C37B171B8208AE0045E1D8 /* LoadXmlViewController.swift in Sources */,
 				F0E35E5D1B71B6E000CC6A6B /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

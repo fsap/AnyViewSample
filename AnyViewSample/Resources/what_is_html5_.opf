@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE package PUBLIC "+//ISBN 0-9673008-1-9//DTD OEB 1.2 Package//EN" "http://openebook.org/dtds/oeb-1.2/oebpkg12.dtd">
+<package xmlns="http://openebook.org/namespaces/oeb-package/1.0/" xmlns:opf="http://www.idpf.org/2007/opf/" unique-identifier="bookid">
+  <metadata>
+    <dc-metadata xmlns:oebpackage="http://openebook.org/namespaces/oeb-package/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:Identifier id="bookid">urn:isbn:9781449308148</dc:Identifier>
+      <dc:Title>What Is HTML5?</dc:Title>
+      <dc:Rights>Copyright © 2011 O'Reilly Media, Inc.</dc:Rights>
+      <dc:Publisher>Bookshare</dc:Publisher>
+      <dc:Subject>COMPUTERS / Programming Languages / HTML</dc:Subject>
+      <dc:Date>2011-07-13</dc:Date>
+      <dc:Description>&lt;p&gt;In this post, we take a deeper look at HTML5 and offer a simple proposition with a lot of complex consequences: HTML5 is both something entirely new, and yet nothing more than HTML was ever intended to be; and that once you really understand HTML5, you&amp;#8217;ll change the way you code and even think about the web and your own web applications.&lt;/p&gt;</dc:Description>
+      <dc:Identifier scheme="ISBN" id="ID-9781449314491">9781449314491</dc:Identifier>
+      <dc:Creator file-as="Mclaughlin, Brett">Brett Mclaughlin</dc:Creator>
+      <dc:Language>en_US</dc:Language>
+      <dc:Format>ANSI/NISO Z39.86-2005</dc:Format>
+      <dc:Identifier scheme="BKSH" id="bksh-id">Bookshare-395200_3833605</dc:Identifier>
+    </dc-metadata>
+    <x-metadata>
+      <meta name="cover" content="cover-image" />
+      <meta name="dtb:multimediaType" content="textNCX" />
+      <meta name="dtb:multimediaContent" content="text,image" />
+      <meta name="dtb:sourcePublisher" content="O'Reilly Media" />
+      <meta name="Synopsis" content="&amp;lt;p&amp;gt;In this post, we take a deeper look at HTML5 and offer a simple proposition with a lot of complex consequences: HTML5 is both something entirely new, and yet nothing more than HTML was ever intended to be; and that once you really understand HTML5, you&amp;amp;#8217;ll change the way you code and even think about the web and your own web applications.&amp;lt;/p&amp;gt;" />
+      <meta name="dtb:sourceDate" content="2011-07-13" />
+      <meta name="Copyright" content="O&amp;apos;Reilly Media, Inc." />
+      <meta name="DCTERMS.date.dateCopyrighted" content="2011" />
+    <meta name="dtb:sourceRights" content="O&amp;apos;Reilly Media, Inc." /></x-metadata>
+  </metadata>
+  <manifest><item id="xml" href="What_Is_HTML5_.xml" media-type="application/x-dtbook+xml" /><item id="ncx" href="What_Is_HTML5_.ncx" media-type="application/x-dtbncx+xml" />
+    
+    
+    <item id="cover-image" href="images/lrg.jpg" media-type="image/jpeg" />
+    <item id="id2382017" href="images/0511-html5-logo.jpg" media-type="image/png" />
+    <item id="id2383769" href="images/twitterscreengrab.png.jpg" media-type="image/jpeg" />
+    <item id="opf" href="What_Is_HTML5_.opf" media-type="text/xml" />
+    <item id="SMIL1" href="What_Is_HTML5_00001.smil" media-type="application/smil" />
+  </manifest>
+  <spine>
+    <itemref idref="SMIL1" />
+  </spine>
+  
+</package>
